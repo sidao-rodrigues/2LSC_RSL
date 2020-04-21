@@ -13,4 +13,4 @@ O código pode ser modificado e utilizado livremente.
 
 Compartilhe e contribua para que nossa comunidade acadêmica possa ter mais trabalhos e bons frutos! (:  
 
-
+Créditos: Sidney R., Lucas M., Leonardo A., Cynthia M.
