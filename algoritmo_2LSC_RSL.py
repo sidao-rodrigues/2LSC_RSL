@@ -39,6 +39,7 @@ for page in pages:
                         #que em seguida será utilizada para comparar com a string de busca da RSL.
                         #(Obs.: Todo o texto da primeira página foi convertido para caixa baixa (minúsculo) para evitar problemas.)
                         texto = texto + l.get_text().lower()
+                texto = ' '.join(texto.split())
                 #Armazenado todo o texto da primeira página encontrada, o algoritmo irá realizar o teste da string de busca e verificar se as palavras da string se adaqua ao artigo.
                 #Nesse momento foi utilizado várias condições para combinar os operadores lógicos AND e OR. Quando se tem o operador OR em várias palavras dentro do mesmo escopo uitiliza-se o caratere | (pipe)
                 #e quando se quer fazer outra operação com AND, utiliza-se o código re.search('palavra_que_se_quer_pesquisar', texto).
