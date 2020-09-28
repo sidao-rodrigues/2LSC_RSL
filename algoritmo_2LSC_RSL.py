@@ -20,6 +20,7 @@ pages = PDFPage.get_pages(fp)
 
 pagina = 0
 qtd_trabalhos = 0
+paginas = []
 for page in pages:
     pagina = int(pagina) + 1
     interpreter.process_page(page)
@@ -48,4 +49,18 @@ for page in pages:
                 if re.search("mobilidade|locomoção|localização", texto) and re.search("deficiência visual|deficiente visual|cegueira", texto) and re.search("tecnologia assistiva|tecnologias assistivas", texto):
                     #Caso encontre as palavras da string de busca, o algoritmo irá imprimir no console que foi encontrado um artigo com essas caracteristicas na página tal.
                     print("Artigo encontrado referente a string de busca encontrado na pagina :"+str(pagina))
+                    paginas.append(pagina)
                 break
+                
+#APRESENTAÇÃO DE RESULTADOS
+print("\n\n"+("#" * 60))
+print("#"+(" " * 18)+"RESULTADO DA PESQUISA!"+(" " * 18)+"#")
+print(("#" * 60)+"\n")
+print("Caminho do arquivo analisado: \n"+path_arquivo)
+print("\nQuantidade de artigos no arquivo: "+str(qtd_trabalhos))
+print("\n")
+print("Artigos encontrados pela aplicação da string de busca: "+str(len(paginas))+"\n")
+for pg in paginas:
+    print(">>>>> Artigo encontrado na página: "+str(pg))
+print("") 
+print(("#" * 60))
